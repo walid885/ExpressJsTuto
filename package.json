@@ -1,0 +1,23 @@
+{
+  "name": "expressjstuto",
+  "version": "1.0.0",
+  "description": "This project is based on a youtube Crash course from the channel , Traversy Media",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/walid885/ExpressJsTuto.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/walid885/ExpressJsTuto/issues"
+  },
+  "homepage": "https://github.com/walid885/ExpressJsTuto#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
