@@ -3,11 +3,8 @@ const path = require('path')
 const memebers = require('./Members')
 const moment = require('moment')
 const app = express();
+const logger = require('./Middleware/Logger')
 
-const logger = (req, res, next )=>  {
-    console.log(`${req.protocol}://${req.get('host')}${req.originalUrl}: ${moment().format()}`);
-    next();
-}
 // Init Middleware
 app.use(logger)
 // gets all memebres
