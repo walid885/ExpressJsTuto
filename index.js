@@ -18,7 +18,8 @@ app.use(express.json());
 app.use(express.urlencoded({extended:false}))
 
 
-
+// set a static user 
+app.use(express.static(path.join(__dirname,'Public')))
 
 //Homepage route
 
@@ -26,8 +27,7 @@ app.get('/', (req,res) => res.render('index'))
 
 
 
-// set a static user 
-app.use(express.static(path.join(__dirname,'Public')))
+
 
 app.use('/api/memebers', require('./api/memebers'))
 
