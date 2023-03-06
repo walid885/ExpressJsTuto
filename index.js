@@ -11,15 +11,23 @@ const engine = require ('express-handlebars')
 
 // handlebars middleware
 app.engine('handelbars',exphbs.engine({defaultLayout:'main'}))
-app.set('view engine','handlebars');
+app.set('view engine', 'handlebars');
 
 //body parser Middleware 
 app.use(express.json());
 app.use(express.urlencoded({extended:false}))
 
+
+
+
+//Homepage route
+
+app.get('/', (req,res) => res.render('index'))
+
+
+
 // set a static user 
 app.use(express.static(path.join(__dirname,'Public')))
-
 
 app.use('/api/memebers', require('./api/memebers'))
 
