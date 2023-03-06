@@ -4,7 +4,11 @@ const app = express();
 const logger = require('./Middleware/Logger')
 
 // Init Middleware
-app.use(logger)
+//app.use(logger)
+
+//body parser Middleware 
+app.use(express.json());
+app.use(express.urlencoded({extended:false}))
 
 // set a static user 
 app.use(express.static(path.join(__dirname,'Public')))
